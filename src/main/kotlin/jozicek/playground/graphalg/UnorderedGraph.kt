@@ -7,14 +7,14 @@ import java.util.*
  */
 open class UnorderedGraph(val numberOfVertices: Int) : Graph {
 
-     val adjListArray = Array(numberOfVertices) { LinkedList<Int>() }
+     override val adjListArray = Array(numberOfVertices) { LinkedList<Node>() }
 
     /**
      * add new edge to the graph.
      */
-     override fun addEdge(src: Int, dest: Int) {
-        adjListArray[src].add(dest)
-        adjListArray[dest].add(src)
+     override fun addEdge(src: Node, dest: Node) {
+        adjListArray[src.number].add(dest)
+        adjListArray[dest.number].add(src)
     }
 
     /**
@@ -31,5 +31,7 @@ open class UnorderedGraph(val numberOfVertices: Int) : Graph {
         }
 
     }
+
+
 
 }
