@@ -1,7 +1,7 @@
 package jozicek.playground.graphalg
 
 fun main(args: Array<String>) {
-    val g = Graph(5)
+    val g = UnorderedGraph(5)
     g.addEdge(0,1)
     g.addEdge(0,4)
     g.addEdge(1,2)
