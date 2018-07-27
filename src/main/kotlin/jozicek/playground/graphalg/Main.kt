@@ -15,5 +15,6 @@ fun main(args: Array<String>) {
     g.addEdge(node2,node3)
     g.addEdge(node3,node4)
 
-    bfs(node0, g)
+    //bfs(node0, g)
+    dfs(node0, g, HashSet())
 }

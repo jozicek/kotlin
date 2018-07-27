@@ -7,7 +7,8 @@ import java.util.*
  */
 open class UnorderedGraph(val numberOfVertices: Int) : Graph {
 
-     override val adjListArray = Array(numberOfVertices) { LinkedList<Node>() }
+
+    override val adjListArray = Array(numberOfVertices) { LinkedList<Node>() }
 
     /**
      * add new edge to the graph.
@@ -30,6 +31,10 @@ open class UnorderedGraph(val numberOfVertices: Int) : Graph {
             println()
         }
 
+    }
+
+    override fun getNeighboursOfNodeWithNumber(number: Int): LinkedList<Node> {
+        return adjListArray[number]
     }
 
 

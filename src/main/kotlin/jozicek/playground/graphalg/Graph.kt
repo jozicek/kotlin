@@ -10,4 +10,6 @@ interface Graph {
 
     fun print()
 
+    fun getNeighboursOfNodeWithNumber(number: Int) : LinkedList<Node>
+
 }
